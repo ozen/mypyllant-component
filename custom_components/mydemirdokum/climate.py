@@ -46,9 +46,9 @@ from myPyllant.enums import (
     ZoneOperatingType,
 )
 
-from custom_components.mypyllant.decorators import ensure_token_refresh
+from custom_components.mydemirdokum.decorators import ensure_token_refresh
 
-from custom_components.mypyllant.utils import (
+from custom_components.mydemirdokum.utils import (
     shorten_zone_name,
     EntityList,
     AmbisenseCoordinatorEntity,

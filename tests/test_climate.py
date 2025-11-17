@@ -12,15 +12,15 @@ from myPyllant.api import MyPyllantAPI
 from myPyllant.tests.generate_test_data import DATA_DIR
 from myPyllant.tests.utils import list_test_data, load_test_data
 
-from custom_components.mypyllant.const import DOMAIN
-from custom_components.mypyllant.coordinator import SystemCoordinator
-from custom_components.mypyllant.climate import (
+from custom_components.mydemirdokum.const import DOMAIN
+from custom_components.mydemirdokum.coordinator import SystemCoordinator
+from custom_components.mydemirdokum.climate import (
     ZoneClimate,
     async_setup_entry,
     ZONE_HVAC_ACTION_MAP,
     AmbisenseClimate,
 )
-from custom_components.mypyllant.ventilation_climate import VentilationClimate
+from custom_components.mydemirdokum.ventilation_climate import VentilationClimate
 from tests.utils import get_config_entry
 
 

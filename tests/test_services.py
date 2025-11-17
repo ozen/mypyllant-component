@@ -10,9 +10,9 @@ from homeassistant.loader import (
     DATA_MISSING_PLATFORMS,
 )
 
-from custom_components.mypyllant import SystemCoordinator
-from custom_components.mypyllant.climate import AmbisenseClimate
-from custom_components.mypyllant.const import (
+from custom_components.mydemirdokum import SystemCoordinator
+from custom_components.mydemirdokum.climate import AmbisenseClimate
+from custom_components.mydemirdokum.const import (
     SERVICE_GENERATE_TEST_DATA,
     SERVICE_EXPORT,
     DOMAIN,

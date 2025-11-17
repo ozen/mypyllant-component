@@ -7,11 +7,11 @@ from aiohttp.client_exceptions import ClientResponseError
 from freezegun import freeze_time
 from homeassistant.helpers.update_coordinator import UpdateFailed
 
-from custom_components.mypyllant.utils import extract_quota_duration
+from custom_components.mydemirdokum.utils import extract_quota_duration
 from myPyllant.api import MyPyllantAPI
 from myPyllant.tests.utils import list_test_data
 
-from custom_components.mypyllant.const import (
+from custom_components.mydemirdokum.const import (
     API_DOWN_PAUSE_INTERVAL,
     QUOTA_PAUSE_INTERVAL,
 )

@@ -29,7 +29,7 @@ from myPyllant.models import (
     System,
 )
 
-from custom_components.mypyllant.utils import (
+from custom_components.mydemirdokum.utils import (
     SystemCoordinatorEntity,
     DomesticHotWaterCoordinatorEntity,
     ZoneCoordinatorEntity,

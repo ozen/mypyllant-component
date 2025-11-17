@@ -12,7 +12,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 from homeassistant.helpers import entity_registry as er
 
-from custom_components.mypyllant.const import (
+from custom_components.mydemirdokum.const import (
     DOMAIN,
     OPTION_REFRESH_DELAY,
     DEFAULT_REFRESH_DELAY,
@@ -35,7 +35,7 @@ from custom_components.mypyllant.const import (
     OPTION_FETCH_DTC,
     DEFAULT_FETCH_DTC,
 )
-from custom_components.mypyllant.utils import (
+from custom_components.mydemirdokum.utils import (
     is_quota_exceeded_exception,
     extract_quota_duration,
 )

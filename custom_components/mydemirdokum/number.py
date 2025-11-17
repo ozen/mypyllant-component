@@ -9,10 +9,10 @@ from homeassistant.const import UnitOfTime, UnitOfTemperature
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from custom_components.mypyllant.const import DOMAIN, DEFAULT_HOLIDAY_SETPOINT
-from custom_components.mypyllant.decorators import ensure_token_refresh
-from custom_components.mypyllant.coordinator import SystemCoordinator
-from custom_components.mypyllant.utils import (
+from custom_components.mydemirdokum.const import DOMAIN, DEFAULT_HOLIDAY_SETPOINT
+from custom_components.mydemirdokum.decorators import ensure_token_refresh
+from custom_components.mydemirdokum.coordinator import SystemCoordinator
+from custom_components.mydemirdokum.utils import (
     HolidayEntity,
     SystemCoordinatorEntity,
     ZoneCoordinatorEntity,

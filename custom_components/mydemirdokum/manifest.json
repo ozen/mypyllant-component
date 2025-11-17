@@ -1,0 +1,19 @@
+{
+  "domain": "mydemirdokum",
+  "name": "myDemirdokum",
+  "codeowners": [
+    "@ozen"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/ozen/mypyllant-component#readme",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/ozen/mypyllant-component/issues",
+  "loggers": [
+    "myPyllant"
+  ],
+  "requirements": [
+    "mypyllant@git+https://github.com/ozen/mypyllant.git@main"
+  ],
+  "version": "v0.0.2"
+}
