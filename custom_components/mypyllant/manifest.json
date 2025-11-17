@@ -13,7 +13,7 @@
     "myPyllant"
   ],
   "requirements": [
-    "mypyllant@git+https://github.com/ozen/mypyllant-component.git@main"
+    "mypyllant@git+https://github.com/ozen/mypyllant.git@main"
   ],
-  "version": "v0.9.8"
+  "version": "v0.9.10"
 }
