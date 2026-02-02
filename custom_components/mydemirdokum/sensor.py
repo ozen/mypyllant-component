@@ -48,6 +48,7 @@ DATA_UNIT_MAP = {
     "HEAT_GENERATED": UnitOfEnergy.WATT_HOUR,
     "CONSUMED_PRIMARY_ENERGY": UnitOfEnergy.WATT_HOUR,
     "EARNED_SOLAR_ENERGY": UnitOfEnergy.WATT_HOUR,
+    "EARNED_PV_ENERGY": UnitOfEnergy.WATT_HOUR,
 }
 
 
@@ -1106,6 +1107,7 @@ class SystemDeviceCurrentPowerSensor(SystemDeviceSensor):
     _attr_state_class = SensorStateClass.MEASUREMENT
     _attr_entity_category = EntityCategory.DIAGNOSTIC
     _attr_native_unit_of_measurement = UnitOfPower.WATT
+    _attr_device_class = SensorDeviceClass.POWER
 
     @property
     def native_value(self):

@@ -122,6 +122,16 @@ Uses the [myPyllant Python library](https://github.com/signalkraft/mypyllant).
 
 After setting up the integration, you can configure it further in Settings :material-arrow-right: Devices & Services :material-arrow-right: myVAILLANT :material-arrow-right: Configure.
 
+
+!!! warning
+
+    The integration fetches limited data by default, to avoid running into quota errors, or generating unnecessary
+    errors (when trying to fetch data that' not available for your system).
+
+    If you have data that's available in the myVAILLANT app, but not the integration, you probably need to modify
+    the integration options starting with `Fetch XYZ`.
+
+
 ### Seconds between updates
 
 :   Wait interval between updating (most) sensors. The energy data and efficiency sensors are controlled by the next option.
@@ -129,7 +139,7 @@ After setting up the integration, you can configure it further in Settings :mate
 
     You should restart Home Assistant after changing this setting.
     
-    :material-cog: Default is 60 seconds.
+    :material-cog: Default is 1800 seconds.
 
 ### Seconds between energy data updates
 
@@ -208,7 +218,7 @@ After setting up the integration, you can configure it further in Settings :mate
 ### Fetch real-time statistics (not supported on every system)
 
 :   Fetches real-time statistics from the system. This includes on/off cycles and operation time.
-    if you see 404 errors in your logs after enabling this, your system doesn't support this data.
+    If you see 404 errors in your logs after enabling this, your system doesn't support this data.
     It's best to turn it off again.
 
     :material-cog: Default is off.
@@ -216,8 +226,46 @@ After setting up the integration, you can configure it further in Settings :mate
 ### Fetch real-time power usage (not supported on every system)
 
 :   Fetches real-time power usage of the system.
-    if you see 404 errors in your logs after enabling this, your system doesn't support this data.
+    If you see 404 errors in your logs after enabling this, your system doesn't support this data.
     It's best to turn it off again.
+
+    :material-cog: Default is off.
+
+### Fetch system connection status
+
+:   Fetches connection status of the system (Connected / Offline).
+
+    :material-cog: Default is off.
+
+### Fetch diagnostic trouble codes
+
+:   Fetches diagnostic trouble codes of the system, for each connected & supported device.
+
+    :material-cog: Default is off.
+
+### Fetch Ambisense Capability
+
+:   Fetches information, whether the system has Ambisense capabilities.
+
+    :material-cog: Default is off.
+
+### Fetch Ambisense Room Thermostats (not supported on every system)
+
+:   Fetches Ambisense room thermostat data.
+    If you see 404 errors in your logs after enabling this, your system doesn't support this data.
+    It's best to turn it off again.
+
+    :material-cog: Default is off.
+
+### Fetch EEBUS Data
+
+:   Fetches information whether EEBUS is available or not.
+
+    :material-cog: Default is off.
+
+### Fetch Energy Management Data
+
+:   Fetches energy management data from EEBUS.
 
     :material-cog: Default is off.
 
@@ -294,6 +342,16 @@ Your HVAC system might differ from the ones in [Tested Setups](#tested-setups) a
 If you don't see any entities, or get an error during setup, please check [Debugging](3-contributing.md#debugging) and
 create an issue.
 With debugging enabled, there's a chance to find the culprit in the data returned by the myVAILLANT API and fix it.
+
+### Getting Quota Exceeded Errors
+
+If you are getting "Quota Exceeded" errors, you have a few options:
+
+1. Decrease update interval in the integration options. 1800s for live data updates and 7200s for energy data seems save, based on user feedback
+2. Disable energy and efficiency sensor that you don't need. Disabled sensors are skipped in the update, and reduce API calls
+3. Invite another user in the myVAILLANT app and use that one for the integration. This way at least queries from the mobile app run on a separate account
+
+There's no clear documentation from Vaillant about which API endpoints have quotas, what these quotas are, or how to avoid them.
 
 ### Vaillant API is occasionally unavailable
 
